@@ -38,5 +38,29 @@ private boolean like;
       *getName, getartist, getduration, like, unlike, isliked
       */
 
+      public String getName()
+      {
+        return songName;
+      }
+
+      public String getArtist()
+      {
+        return artist;
+      }
+
+      public double getDuration()
+      {
+        return duration;
+      } 
+
+      public void like()
+      {
+        like = true;
+      } 
+
+      public void unlike()
+      {
+        like = false;
+      } 
 
 }
