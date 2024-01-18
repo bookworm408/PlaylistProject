@@ -7,11 +7,12 @@ import java.util.ArrayList;
 public class Playlist 
 {
     /**
-     * Fields-- This will likely just need to be the ArrayList of Songs. Reference our previous problems
+     * Variables-- This will likely just need to be the ArrayList of Songs. Reference our previous problems
      * (CarDealership, Zoo) for structure on how this will look
      */
-    public PLaylist
-    ArrayList<song> Fields;
+
+    ArrayList<Song> playlist;
+    
 
 
 
@@ -19,6 +20,10 @@ public class Playlist
       * Constructor-- this doesn't need any parameters. You should just initialize the ArrayList and
       * then use additional methods to add Songs in one-by-one
       */
+      public Playlist()
+      {
+        playlist = new ArrayList<Song>();
+      }
 
 
       
@@ -33,4 +38,9 @@ public class Playlist
        * Determining the total duration of all songs
        * Removing all unliked songs from the playlist (careful with this one!)
        */
+      public void addSong()
+      {
+        playlist.add();
+      }
+      
 }
