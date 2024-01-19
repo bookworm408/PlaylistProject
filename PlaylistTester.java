@@ -18,7 +18,11 @@ public class PlaylistTester {
          * is something like...
          * p.addSong(new Song(..., ..., ...))
          */
-
+        p.add(new Song("Rock and Roll", "Led Zepplin", "3:40"));
+        for (Song s : p.getAllSongs())
+        {
+            System.out.println(s);
+        }
 
 
         System.out.println("Printing the songs...\n");
