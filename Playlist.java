@@ -38,9 +38,58 @@ public class Playlist
        * Determining the total duration of all songs
        * Removing all unliked songs from the playlist (careful with this one!)
        */
-      public void addSong()
+
+
+    /**
+     * @param newSong the song to be added
+     */
+      public void addSong(Song newSong)
       {
-        playlist.add();
+        playlist.add(newSong);
       }
+
+
+    /**
+     * Likes a song
+     */
+      public void like(Song newSong)
+      {
+        newSong.like();
+      } 
+
+      /**
+       * Removes song from playlist
+       */
+      public void remove(Song exSong)
+      {
+        playlist.remove(exSong);
+      } 
+
+      public ArrayList<Song> getAllSongs()
+    {
+        return playlist;
+    }
       
+    public ArrayList<Song> getLikedSongs()
+    {
+     ArrayList<Song> likedSongs = new ArrayList<Song>();
+     for (Song song : playlist)
+     {
+        if (song.isLiked())
+        {
+            likedSongs.add(song);
+        }
+     }
+     return likedSongs;
+    }
+
+    public double totalDuration()
+    {
+        double total = 0;
+        for (int i = 0; i < playlist.size(); i++)
+        {
+            total += playlist.get(i).getDurationInSeconds();
+        } 
+        return total;
+    }
 }
