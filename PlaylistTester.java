@@ -10,6 +10,7 @@ public class PlaylistTester {
     public static void main(String[] args) {
         System.out.println("Initializing a Playlist...\n");
         //Make your playlist here
+        private String Playlist;
 
         System.out.println("Adding songs to the Playlist...\n");
         /**
@@ -22,7 +23,7 @@ public class PlaylistTester {
 
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
-
+        
 
         System.out.println("\nLiking the songs in position X, Y, Z, etc....\n");
         //Once your songs are 'liked', this should be reflected in the next printout
@@ -43,7 +44,7 @@ public class PlaylistTester {
 
         System.out.println("\nPrinting the total duration of all songs...\n");
         //Note that the format should look something like minutes:seconds
-
+        System.out.print(totalMinutes + ":" + totalSeconds);
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
