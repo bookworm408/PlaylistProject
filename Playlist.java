@@ -11,7 +11,7 @@ public class Playlist
      * (CarDealership, Zoo) for structure on how this will look
      */
 
-    ArrayList<Song> playlist;
+    private ArrayList<Song> playlist;
     
 
 
@@ -48,21 +48,23 @@ public class Playlist
         playlist.add(newSong);
       }
 
+      
+
 
     /**
      * Likes a song
      */
-      public void like(Song newSong)
+      public void like(int Index)
       {
-        newSong.like();
+        playlist.get(Index).like();
       } 
 
       /**
        * Removes song from playlist
        */
-      public void remove(Song exSong)
+      public void remove(int Index)
       {
-        playlist.remove(exSong);
+        playlist.remove(Index);
       } 
 
       public ArrayList<Song> getAllSongs()
@@ -83,13 +85,26 @@ public class Playlist
      return likedSongs;
     }
 
-    public double totalDuration()
+    public String totalDuration()
     {
-        double total = 0;
+        int total = 0;
         for (int i = 0; i < playlist.size(); i++)
         {
             total += playlist.get(i).getDurationInSeconds();
         } 
-        return total;
+        int seconds = total % 60;
+        int minutes = total / 60;
+        return minutes+ ":" +seconds;
+    }
+
+    public void removeUnliked()
+    {
+        for (int i = 0; i < playlist.size(); i++)
+        {
+          if(playlist.get(i).isLiked() == false)
+          {
+              playlist.remove(i);
+          } 
+        }
     }
 }

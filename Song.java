@@ -68,9 +68,9 @@ private boolean like;
         return like;
       } 
 
-      public double getDurationInSeconds()
+      public int getDurationInSeconds()
       {
-        double seconds = 0;
+        int seconds = 0;
         String minutesPart = duration.substring(0, duration.indexOf(":"));
         seconds += Integer.parseInt(minutesPart) * 60;
         String secondsPart = duration.substring(duration.indexOf(":") +1);
@@ -81,7 +81,14 @@ private boolean like;
         public String toString()
       {
         {
-            return "songName-" + songName + ", artist-" + artist + ", duration-" + duration;
+            if (like)
+            {
+              return "songName- " + songName + ", artist- " + artist + ", duration- " + duration + ", liked\n";
+            }
+            else 
+            {
+              return "songName- " + songName + ", artist- " + artist + ", duration- " + duration + "\n";
+            }
         } 
       }
 }
