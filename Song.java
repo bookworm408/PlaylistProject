@@ -18,6 +18,8 @@ private boolean like;
      * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
      */
     public Song(String songName, String artist, String duration, boolean like)
+
+
     {
         this.songName = songName;
         this.artist = artist;
@@ -68,15 +70,19 @@ private boolean like;
         return like;
       } 
 
+
       public int getDurationInSeconds()
       {
         int seconds = 0;
+
+
         String minutesPart = duration.substring(0, duration.indexOf(":"));
         seconds += Integer.parseInt(minutesPart) * 60;
         String secondsPart = duration.substring(duration.indexOf(":") +1);
         seconds += Integer.parseInt(secondsPart);
         return seconds;
       }
+
 
         public String toString()
       {
@@ -92,3 +98,4 @@ private boolean like;
         } 
       }
 }
+
